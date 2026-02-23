@@ -5,6 +5,7 @@ on:
 jobs:
   runIndex:
     steps:
-      - name: src/index
+    - name: src/index
       run: node src/index.js
+
   
