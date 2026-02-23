@@ -185,7 +185,7 @@ async function main() {
     const articles = await fetchRecentArticles(feedUrls);
 
     // 3. Filter top 10
-    const topArticles = filterTopArticles(articles, 10);
+    const topArticles = filterTopArticles(articles, 3);
     console.log(`🎯 Selected top ${topArticles.length} articles\n`);
 
     // 4. Generate summaries
@@ -193,6 +193,8 @@ async function main() {
 
     // 5. Send to Telegram
     await sendToTelegram(summaries);
+
+    console.log('summaries', summaries)
 
     console.log('\n🎉 Digest generation complete!');
 }
