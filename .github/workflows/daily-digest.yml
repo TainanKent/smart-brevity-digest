@@ -4,6 +4,7 @@ on:
   - cron: "0 * * * 1-5"
 jobs:
   runIndex:
+    name: run index
     runs-on: ubuntu-latest
     steps:
     - uses: actions/setup-node@v4
