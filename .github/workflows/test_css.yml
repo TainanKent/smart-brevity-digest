@@ -13,7 +13,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20.x'
-      - name: get path
-        run: pwd
+      - name: get linux folder
+        run: ls -al
       - name: Install Dependencies
         run: node ./src/index.js
