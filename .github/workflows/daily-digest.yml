@@ -4,8 +4,11 @@ on:
   - cron: "0 * * * 1-5"
 jobs:
   runIndex:
+    runs-on: ubuntu-latest
     steps:
-    - name: src/index
-      run: node src/index.js
+    - uses: actions/setup-node@v4
+      with:
+        node-version: '14'
+    - run: node src/index.js
 
   
