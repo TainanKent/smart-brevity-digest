@@ -2,5 +2,9 @@ name: send message to telegram
 on:
   schedule:
   - cron: "0 * * * 1-5"
-run: node src/index.js
+jobs:
+  runIndex:
+    steps:
+      - name: src/index
+      run: node src/index.js
   
