@@ -15,5 +15,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20.x'
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
       - run: npm install
       - run: node index.js
