@@ -3,7 +3,7 @@ on:
   push:
     branches: [ "main" ]
   schedule:
-  - cron: "0/10 * * * 1-5"
+  - cron: "0 9 * * 1-5" # 台灣時間早上9點
 jobs:
   my_job:
     name: run index
