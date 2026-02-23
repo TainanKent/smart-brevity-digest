@@ -179,7 +179,7 @@ async function main() {
     console.log('🚀 Starting AI Digest Generator...\n');
 
     // 1. Parse OPML
-    const feedUrls = await parseOPML(path.join(__dirname, '../config/feeds.opml'));
+    const feedUrls = await parseOPML(path.join(__dirname, './config/feeds.opml'));
 
     // 2. Fetch articles
     const articles = await fetchRecentArticles(feedUrls);
